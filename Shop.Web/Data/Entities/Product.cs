@@ -33,6 +33,19 @@ namespace Shop.Web.Data.Entities
         public decimal Stock { get; set; }
 
         public User User { get; set; }
+
+        public string ImageFullPath 
+        {
+            get 
+            {
+                if (string.IsNullOrEmpty(this.ImageURL))
+                {
+                    return null;
+                }
+
+                return $"http://jleggis74-001-site1.dtempurl.com{this.ImageURL.Substring(1)}";
+            }
+        } 
         
     }
 }

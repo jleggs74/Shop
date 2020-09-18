@@ -37,7 +37,7 @@
                     UserName = "jllg74@gmail.com",
                     PhoneNumber = "6121770653"
                 };
-
+                
                 var result = await this.userHelper.AddUserAsync(user, "123456");
                 if (result != IdentityResult.Success)
                 {
